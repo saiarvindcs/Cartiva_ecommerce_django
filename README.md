@@ -76,11 +76,11 @@ The project has been tested through Swagger UI, and automated CI checks are conf
 ### Developed By
 
 **CS Sai**  
-_Python Backend Developer
+**Python Backend Developer
 
-License: MIT License_
+License: MIT License**
 
-**GitHub:** [My GitHub Profile]([(https://github.com/saiarvindcs/)])
+**GitHub:** [My GitHub Profile](https://github.com/saiarvindcs/)
 
 ---
 
