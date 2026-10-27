@@ -1,0 +1,5 @@
+{% extends 'store/base.html' %}{% block content %}
+<section class="hero"><div><p class="eyebrow">CURATED FOR EVERYDAY LIFE</p><h1>Everything you need.<br>Nothing you don't.</h1><p>Discover thoughtful essentials, trending technology, and more.</p><a class="btn" href="/shop/">Explore collection</a></div><div class="hero-art">NEW<br><strong>SEASON</strong><small>2026 COLLECTION</small></div></section>
+<h2>Shop by category</h2><div class="chips">{% for c in categories %}<a href="/shop/?category={{ c.slug }}">{{ c.name }}</a>{% empty %}<span>Categories will appear here when configured.</span>{% endfor %}</div>
+<div class="section-head"><h2>New arrivals</h2><a href="/shop/">View all</a></div><div class="products">{% for p in products %}{% include 'store/product_card.html' %}{% empty %}<p>No products yet. <a href="/seller/">Become a seller and list the first product.</a></p>{% endfor %}</div>
+{% endblock %}

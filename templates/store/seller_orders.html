@@ -1,0 +1,4 @@
+{% extends 'store/base.html' %}{% block content %}<h1>Seller orders</h1><div class="panel" id="seller-orders">Loading...</div>{% endblock %}{% block scripts %}<script>
+async function load(){try{const rows=await api('/api/orders/seller-orders/');document.getElementById('seller-orders').innerHTML=rows.map(o=>`<div class="cart-row"><span>Order #${o.id} · ${escapeHtml(o.status)} · ₹${escapeHtml(o.total)}</span><span>${o.items.map(i=>escapeHtml(i.product_name)+' × '+i.quantity).join(', ')}</span>${o.status==='paid'?`<button onclick="ship(${o.id})">Mark shipped</button>`:''}</div>`).join('')||'No orders yet'}catch(e){document.getElementById('seller-orders').textContent=e.message}}
+async function ship(id){try{await api('/api/orders/orders/'+id+'/ship/',{method:'POST'});load()}catch(e){alert(e.message)}}load();
+</script>{% endblock %}

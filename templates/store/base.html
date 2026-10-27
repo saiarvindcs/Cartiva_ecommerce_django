@@ -1,0 +1,66 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#FAF7F0">
+    <title>{% block title %}Cartiva | Thoughtfully curated{% endblock %}
+    </title>
+    {% load static %}
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+</head>
+
+<body>
+    <div class="announcement">THE ART OF EVERYDAY LIVING <span aria-hidden="true">✦</span> DISCOVER YOUR NEXT FAVORITE
+    </div>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="logo" href="/" aria-label="Velora home">Cartiva<span class="logo-dot">.</span></a>
+            <form action="/shop/" class="search" role="search"><label class="sr-only" for="global-search">Search
+                    products</label><input id="global-search" name="q" placeholder="Search pieces, collections, brands…"
+                    value="{{ query|default:'' }}"><button type="submit" aria-label="Search">⌕ <span
+                        class="search-word">Search</span></button></form>
+            <nav class="header-actions" aria-label="Account and shopping"><a class="nav-cart" href="/cart/"
+                    aria-label="Shopping cart">♡ <span>Cart</span></a><a href="/login/" data-guest hidden>Sign in</a><a
+                    href="/register/" data-guest class="nav-join" hidden>Join Cartiva</a>
+                <details class="account-menu" data-user hidden>
+                    <summary aria-label="Account menu"><span class="account-symbol">♙</span><span>Account</span><span
+                            class="chevron">⌄</span></summary>
+                    <div class="account-popover">
+                        <div class="account-caption">YOUR Cartiva ACCOUNT</div><a href="/my-orders/">My orders</a><a
+                            href="/seller/" data-seller hidden>Seller dashboard</a><a href="/seller/orders/" data-seller
+                            hidden>Seller orders</a><a href="/dashboard/" data-admin hidden>Analytics</a><button
+                            type="button" id="logout-button">Sign out</button>
+                    </div>
+                </details>
+            </nav>
+        </div>
+        <div class="nav-strip">
+            <nav aria-label="Main navigation"><a href="/shop/">Shop all</a><a href="/shop/">Collections</a><a
+                    href="/shop/?sort=created_at">New arrivals</a><a href="/seller/" data-user hidden>Sell on
+                    Cartiva</a><a href="/api/docs/">Developer API</a></nav>
+        </div>
+    </header>
+    <main id="main-content">{% block content %}{% endblock %}</main>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div><a href="/" class="logo">Cartiva<span class="logo-dot">.</span></a>
+                <p>Everyday, elevated. A thoughtfully curated marketplace.</p>
+            </div>
+            <div>
+                <h4>Explore</h4><a href="/shop/">Shop all</a><a href="/cart/">Your bag</a><a
+                    href="/my-orders/">Orders</a>
+            </div>
+            <div>
+                <h4>Cartiva</h4><a href="/seller/">Become a seller</a><a href="/api/docs/">API documentation</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Cartiva · Built with Django REST Framework · Demo storefront</div>
+    </footer>
+    <script src="{% static 'js/site.js' %}"></script>{% block scripts %}{% endblock %}
+</body>
+
+</html>
