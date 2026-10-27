@@ -76,9 +76,9 @@ The project has been tested through Swagger UI, and automated CI checks are conf
 ### Developed By
 
 **CS Sai**  
-Python Backend Developer
+_Python Backend Developer
 
-License: MIT License
+License: MIT License_
 
 **GitHub:** [My GitHub Profile]([(https://github.com/saiarvindcs/)])
 
