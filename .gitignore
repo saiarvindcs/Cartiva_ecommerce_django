@@ -1,5 +1,7 @@
 .env
 .env.*
+celerybeat-schedule
+celerybeat-schedule.*
 !.env.example
 venv/
 __pycache__/
