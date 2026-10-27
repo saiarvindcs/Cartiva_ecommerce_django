@@ -34,3 +34,56 @@ The mock gateway accepts authenticated customers for their own pending orders on
 ## Tests
 
 Inside the container: `docker compose exec web python manage.py check` and `docker compose exec web pytest -q`. Docker runtime is not available in the environment that assembled this ZIP, so Docker startup and end-to-end browser flows have **not** been executed here.
+
+## 📸 Project Screenshots
+
+### Cartiva Website & API Documentation
+
+| Screenshot | Preview |
+|---|---|
+| 1 | ![Screenshot 1](docs/snap1.png) |
+| 2 | ![Screenshot 2](docs/snap2.png) |
+| 3 | ![Screenshot 3](docs/snap3.png) |
+| 4 | ![Screenshot 4](docs/snap4.png) |
+| 5 | ![Screenshot 5](docs/snap5.png) |
+| 6 | ![Screenshot 6](docs/snap6.png) |
+| 7 | ![Screenshot 7](docs/snap7.png) |
+| 8 | ![Screenshot 8](docs/snap8.png) |
+| 9 | ![Screenshot 9](docs/snap9.png) |
+| 10 | ![Screenshot 10](docs/snap10.png) |
+| 11 | ![Screenshot 11](docs/snap11.png) |
+
+
+---
+
+## Project Status
+
+Cartiva is a portfolio e-commerce project developed using Django REST Framework, PostgreSQL, Redis, Celery, and Docker.
+
+The application includes multi-vendor product management, JWT authentication, role-based access control, shopping carts, idempotent checkout, mock payment processing, order tracking, customer reviews, and analytics.
+
+The project has been tested through Swagger UI, and automated CI checks are configured using GitHub Actions.
+
+**Note:** Payment processing uses a mock payment system for demonstration purposes. No real financial transactions are performed.
+
+---
+
+**Developed as a backend engineering portfolio project.**
+
+
+---
+
+### Developed By
+
+**CS Sai**  
+Python Backend Developer
+
+License: MIT License
+
+**GitHub:** [My GitHub Profile]([(https://github.com/saiarvindcs/)])
+
+---
+
+_© 2026 CS Sai. All rights reserved._
+
+_This is an multi-vendor e-commerce platform built to demonstrate backend engineering, REST API design, secure authentication, and scalable application architecture. Payment transactions are simulated for demonstration purposes._
